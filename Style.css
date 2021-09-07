@@ -17,10 +17,3 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     color:black
 }
-#imgleft{
-    width: 20px;
-    height: 15px;
-    border: 5px black;
-    object-position: left top;
-    object-fit: none;
-}
