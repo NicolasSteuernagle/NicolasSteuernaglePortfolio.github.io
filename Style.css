@@ -28,7 +28,7 @@ body{
 }
 .nav{
     overflow: hidden;
-    background-color: black;
+    background-color:rgb(46, 46, 46);
 }
 .nav a{
    float: left;
