@@ -17,3 +17,13 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     color:black
 }
+.mainImg{
+    width: 100px;
+    display: inline-flex;
+}
+.main img{
+    margin: auto 5px;
+    float: left;
+    width: 150px;
+    height: 30px;
+}
