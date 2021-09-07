@@ -22,4 +22,5 @@ h2{
     height: 15px;
     border: 5px black;
     object-position: left top;
+    object-fit: none;
 }
