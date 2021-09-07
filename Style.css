@@ -1,7 +1,9 @@
 h1{
     text-align: center;
-    text-decoration: wavy;
     font-size: xx-large;
     color: firebrick;
     text-decoration: underline;
+}
+body{
+    background-color: hotpink;
 }
