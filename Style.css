@@ -11,6 +11,9 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
+body{
+    background-color: lightgray;
+}
 .paragraph{
     text-align: center;
     font-size: large;
@@ -19,8 +22,8 @@ h2{
 }
 #img1{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20;
+    left: 20;
     height: auto;
     width: auto;
 }
