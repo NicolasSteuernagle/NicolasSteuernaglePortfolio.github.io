@@ -40,3 +40,23 @@ body{
     margin: 0;
     padding: 0;
 }
+#navigation #list ul li a{
+    text-decoration: none;
+    float: left;
+    margin-right: 5px;
+    line-height: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#000;
+    border: 1px #000;
+    border-bottom: none;
+    padding: 20px;
+    width: 75px;
+    text-align:center;
+    display: block;
+    background: #69f;
+}
+#navigation #list ul li a:hover{
+    background: #f90;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
