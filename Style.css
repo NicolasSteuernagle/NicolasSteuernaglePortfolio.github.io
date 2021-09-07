@@ -17,6 +17,11 @@ h4{
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
+.headerbox{
+    border: 5px outset black;
+    background-color: blue;
+    text-align: center;
+}
 body{
     background-color: lightgray;
 }
