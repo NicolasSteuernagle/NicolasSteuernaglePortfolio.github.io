@@ -20,7 +20,7 @@ h4{
 .headerbox{
     border: 5px outset black;
     background-color: blue;
-    text-align: center;
+    text-align: right;
 }
 body{
     background-color: lightgray;
