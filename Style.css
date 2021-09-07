@@ -28,9 +28,9 @@ body{
 }
 #img1{
     position: fixed;
-    top: 0px;
-    
+    top: 0px;  
     left: 0px ;
     height: auto;
     width: auto;
+    border: black 5px;
 }
