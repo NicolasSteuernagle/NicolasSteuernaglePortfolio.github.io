@@ -43,6 +43,6 @@ body{
     background-color:cyan;
     color: black;
 }
-.nav a:active{
+.nav a.active{
     background-color: whitesmoke;
 }
