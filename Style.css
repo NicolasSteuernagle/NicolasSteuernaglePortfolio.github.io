@@ -17,3 +17,10 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     color:black
 }
+#img1{
+    width: 200px;
+    height: 200px;
+    background-color: hotpink;
+    object-position: left top;
+    object-fit: none;
+}
