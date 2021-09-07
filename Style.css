@@ -12,3 +12,6 @@ h2{
     color: firebrick;
     text-shadow:black;
 }
+body{
+    border: 1px black;
+}
