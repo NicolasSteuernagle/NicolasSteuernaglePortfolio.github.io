@@ -1,8 +1,16 @@
 h1{
     text-align: center;
     font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
     color: firebrick;
     text-decoration: underline;
+}
+h2{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: firebrick;
+    text-shadow: gold;
 }
 body{
     background-image: url("https://blog.codingblocks.com/content/images/2019/01/Software-development.jpg");    
