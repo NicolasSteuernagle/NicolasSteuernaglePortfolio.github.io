@@ -13,5 +13,6 @@ h2{
     text-shadow: gold;
 }
 body{
-    background-image: url("https://blog.codingblocks.com/content/images/2019/01/Software-development.jpg");    
+    background-image: url("https://blog.codingblocks.com/content/images/2019/01/Software-development.jpg");
+    background-size: cover;    
 }
