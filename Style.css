@@ -5,12 +5,7 @@ h1{
     color: black;
     text-decoration: underline;
 }
-h2{
-    text-align: center;
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-}
+
 h4{
     text-align: right;
     font-size: large;
@@ -18,12 +13,9 @@ h4{
     color: black;
 }
 .headerbox{
-    border: 5px outset black;
+    border: 10px outset black;
     background-color: blue;
     text-align: center;
-}
-.info{
-    text-align: right;
 }
 body{
     background-color: lightgray;
