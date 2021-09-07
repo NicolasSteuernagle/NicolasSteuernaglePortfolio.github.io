@@ -12,7 +12,7 @@ h2{
     color: black;
 }
 body{
-    border: 1px black;
+    background-color: darkgray;
 }
 .paragraph{
     text-align: center;
