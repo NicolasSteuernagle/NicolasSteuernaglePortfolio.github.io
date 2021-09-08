@@ -54,7 +54,9 @@ body{
     text-decoration: none;
 }
 .img1{
-    float:left;
+    position: fixed;
+    bottom:400px;
+    left:20px;
     width: 320px;
     height: 320px;
 }
