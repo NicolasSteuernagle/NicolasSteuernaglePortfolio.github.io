@@ -44,8 +44,7 @@ body{
     width: 100%;
 }
 .tab{
-    display: inline-block;
-    margin-left: 300px;
+    float: right;
 }
 .bottombar p.a{
     color:whitesmoke;
