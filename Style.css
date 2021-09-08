@@ -38,7 +38,6 @@ body{
 .bottombar{
     background-color: rgb(46, 46, 46);
     overflow: hidden;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
