@@ -42,7 +42,8 @@ body{
     width: 100%;
 }
 .tab{
-    tab-size: 12;
+    display: inline-block;
+    margin-left: 50px;
 }
 .bottombar p.a{
     color:whitesmoke;
