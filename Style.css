@@ -38,10 +38,9 @@ body{
 .bottombar{
     background-color: rgb(46, 46, 46);
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left:5;
-    right:5;
+    left:0;
     width: 100%;
 }
 .tab{
