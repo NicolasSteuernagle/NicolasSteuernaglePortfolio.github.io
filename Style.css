@@ -40,7 +40,8 @@ body{
     overflow: hidden;
     position: absolute;
     bottom: 0;
-    left:0;
+    left:5;
+    right:5;
     width: 100%;
 }
 .tab{
