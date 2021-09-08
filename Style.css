@@ -46,7 +46,8 @@ body{
     margin-left: 50px;
 }
 .bottombar p.a{
-    position: fixed;
+    position: absolute;
+    width: 100%;
     bottom: 0;
     color:whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
