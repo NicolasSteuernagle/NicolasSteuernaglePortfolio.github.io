@@ -6,6 +6,7 @@
 }
 body{
     background-color: lightgray;
+    padding-right: 60px;
 }
 .paragraph{
     text-align: center;
@@ -95,16 +96,10 @@ body{
     color:rgb(46, 46, 46);
     text-decoration: none;
 }
-.cookie{
-    position: absolute;
-    left: 600;
-    top: 188px;
-}
 .button{
     position: absolute;
-    left:600px;
-    top: 188px;
-    background-color:cyan;
+    right: 30px;
+    bottom: 135px;
     color: black;
     text-align: center;
     font-size: 18px;
