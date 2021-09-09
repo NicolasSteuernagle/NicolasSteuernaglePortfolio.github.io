@@ -47,9 +47,10 @@ body{
     float: right;
 }
 .udLogo{
-    height: auto;
-    width: auto;
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 .bottombar p.a{
     color:whitesmoke;
