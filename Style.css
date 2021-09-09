@@ -54,6 +54,9 @@ body{
     font-size: 17px;
     padding: 14px 16px;
     text-decoration: none;
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
 }
 .udLogo{
     margin-left: auto;
@@ -61,6 +64,8 @@ body{
     height: 70px;
     width: 245px;
     vertical-align: middle;
+    position: absolute;
+    left: 500px;
 }
 .bottombar p.a{
     color:whitesmoke;
@@ -68,6 +73,9 @@ body{
     font-size: 17px;
     padding: 14px 16px;
     text-decoration: none;
+    position: absolute;
+    left: 20px;
+    bottom: 7px;
 }
 .img1{
     position: fixed;
