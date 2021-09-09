@@ -96,6 +96,14 @@ body{
     color:rgb(46, 46, 46);
     text-decoration: none;
 }
+.cookiestext{
+    position: absolute;
+    right: 45px;
+    bottom: 165px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(46,46,46);
+}
 .button{
     position: absolute;
     right: 30px;
