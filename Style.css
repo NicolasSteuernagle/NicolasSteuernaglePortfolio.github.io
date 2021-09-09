@@ -100,3 +100,8 @@ body{
     left: 600;
     top: 188px;
 }
+.button{
+    position: absolute;
+    left:600px;
+    top: 188px;
+}
