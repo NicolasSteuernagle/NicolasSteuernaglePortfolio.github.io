@@ -1,4 +1,4 @@
-var position = 0, testdiv, userProgress, question, userAnswer, possibleAnswers, A, B, C, correct = 0;
+var position = 0, test, userProgress, question, userAnswer, possibleAnswers, A, B, C, correct = 0;
 var myQuestions = [
   {
       question: "What Video Game is Shown in the Image?",
@@ -33,7 +33,7 @@ function get(x){
   return document.getElementById(x);
 }
 function renderQuestion(){
-  test = get("testdiv");
+  test = get("test");
   if(position >= myQuestions.length){
     test.innerHTML = "<h2>You got "+correct+" of "+myQuestions.length+" questions correct</h2>";
     get("userProgress").innerHTML = "Test completed";
