@@ -58,7 +58,7 @@ function renderQuestion(){
 function checkAnswer(){
   choices = document.getElementsByName("choices");
   for(var i=0; i<choices.length; i++){
-    if(possibleAnswers[i].checked){
+    if(choices[i].checked){
       choice = choices[i].value;
     }
   }
