@@ -1,36 +1,3 @@
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-const myQuestions = [
-    {
-      question: "When Did Javascript first appear?",
-      answers: {
-        a: "July 24, 1995",
-        b: "December 4, 1995",
-        c: "August 16, 1995"
-      },
-      correctAnswer: "b"
-    },
-    {
-      question: "Who owns the trademark for JavaScript?",
-      answers: {
-        a: "Microsoft",
-        b: "Apple",
-        c: "Oracle"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "JavaScript is considered a:",
-      answers: {
-        a: "Weakly Typed Language",
-        b: "Poorly Typed Language",
-        c: "Strong Typed Language",
-      },
-      correctAnswer: "a"
-    }
-  ];
-
 function buildQuiz(){
     const output = [];
     myQuestions.forEach(
@@ -71,6 +38,38 @@ function showResults(){
     });
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+const myQuestions = [
+    {
+      question: "When Did Javascript first appear?",
+      answers: {
+        a: "July 24, 1995",
+        b: "December 4, 1995",
+        c: "August 16, 1995"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Who owns the trademark for JavaScript?",
+      answers: {
+        a: "Microsoft",
+        b: "Apple",
+        c: "Oracle"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "JavaScript is considered a:",
+      answers: {
+        a: "Weakly Typed Language",
+        b: "Poorly Typed Language",
+        c: "Strong Typed Language",
+      },
+      correctAnswer: "a"
+    }
+  ];
 buildQuiz();
 
 submitButton.addEventListener('click', showResults);
