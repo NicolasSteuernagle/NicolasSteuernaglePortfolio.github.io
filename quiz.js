@@ -1,5 +1,5 @@
-var position = 0, test, userProgress, question, userAnswer, possibleAnswers, choiceA, choiceB, choiceC, correct = 0;
-var myQuestions = [
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
   {
       question: "What Video Game is Shown in the Image?",
       a: "Halo",
@@ -34,38 +34,38 @@ function get(x){
 }
 function renderQuestion(){
   test = get("test");
-  if(position >= myQuestions.length){
-    test.innerHTML = "<h2>You got "+correct+" of "+myQuestions.length+" questions correct</h2>";
-    get("userProgress").innerHTML = "Test completed";
-    position = 0;
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    pos = 0;
     correct = 0;
     return false;
   }
-  get("userProgress").innerHTML = "Question "+(position+1)+" of "+myQuestions.length;
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
   
-  question = myQuestions[position].question;
-  choiceA = myQuestions[position].a;
-  choiceB = myQuestions[position].b;
-  choiceC = myQuestions[position].c;
+  question = questions[pos].question;
+  chA = questions[pos].a;
+  chB = questions[pos].b;
+  chC = questions[pos].c;
   
   test.innerHTML = "<h3>"+question+"</h3>";
 
-  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+choiceA+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+choiceB+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+choiceC+"</label><br><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br><br>";
   test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
 function checkAnswer(){
-  possibleAnswers = document.getElementsByName("possibleAnswers");
-  for(var i=0; i<possibleAnswers.length; i++){
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
     if(possibleAnswers[i].checked){
-      userAnswer = possibleAnswers[i].value;
+      choice = choices[i].value;
     }
   }
-  if(userAnswer == myQuestions[position].answer){
+  if(choice == questions[pos].answer){
     correct++;
   }
-  position++;
+  pos++;
   renderQuestion();
 }
 
