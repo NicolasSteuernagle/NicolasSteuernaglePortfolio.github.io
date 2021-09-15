@@ -35,7 +35,7 @@ function get(x){
 function renderQuestion(){
   test = get("testdiv");
   if(position >= myQuestions.length){
-    testdiv.innerHTML = "<h2>You got "+correct+" of "+myQuestions.length+" questions correct</h2>";
+    test.innerHTML = "<h2>You got "+correct+" of "+myQuestions.length+" questions correct</h2>";
     get("userProgress").innerHTML = "Test completed";
     position = 0;
     correct = 0;
