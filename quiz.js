@@ -1,108 +1,84 @@
-var myQuestions = [
-    {
-      question: "What is 10/2?",
-      answers: {
-        a: '3',
-        b: '5',
-        c: '115'
-      },
-      correctAnswer: 'b'
+// pos is position of where the user in the test or which question they're up to
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+// this is a multidimensional array with 4 inner array elements with 5 elements inside them
+var questions = [
+  {
+      question: "What is 36 + 42",
+      a: "64",
+      b: "78",
+      c: "76",
+      answer: "B"
     },
-    {
-      question: "What is 30/3?",
-      answers: {
-        a: '3',
-        b: '5',
-        c: '10'
-      },
-      correctAnswer: 'c'
+  {
+      question: "What is 7 x 4?",
+      a: "21",
+      b: "27",
+      c: "28",
+      answer: "C"
+    },
+  {
+      question: "What is 16 / 4?",
+      a: "4",
+      b: "6",
+      c: "3",
+      answer: "A"
+    },
+  {
+      question: "What is 8 x 12?",
+      a: "88",
+      b: "112",
+      c: "96",
+      answer: "C"
     }
   ];
-  
-  var quizContainer = document.getElementById('quiz');
-  var resultsContainer = document.getElementById('results');
-  var submitButton = document.getElementById('submit');
-  
-  generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-  
-  function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-  
-    function showQuestions(questions, quizContainer){
-      // we'll need a place to store the output and the answer choices
-      var output = [];
-      var answers;
-  
-      // for each question...
-      for(var i=0; i<questions.length; i++){
-        
-        // first reset the list of answers
-        answers = [];
-  
-        // for each available answer...
-        for(letter in questions[i].answers){
-  
-          // ...add an html radio button
-          answers.push(
-            '<label>'
-              + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-              + letter + ': '
-              + questions[i].answers[letter]
-            + '</label>'
-          );
-        }
-  
-        // add this question and its answers to the output
-        output.push(
-          '<div class="question">' + questions[i].question + '</div>'
-          + '<div class="answers">' + answers.join('') + '</div>'
-        );
-      }
-  
-      // finally combine our output list into one string of html and put it on the page
-      quizContainer.innerHTML = output.join('');
-    }
-  
-  
-    function showResults(questions, quizContainer, resultsContainer){
-      
-      // gather answer containers from our quiz
-      var answerContainers = quizContainer.querySelectorAll('.answers');
-      
-      // keep track of user's answers
-      var userAnswer = '';
-      var numCorrect = 0;
-      
-      // for each question...
-      for(var i=0; i<questions.length; i++){
-  
-        // find selected answer
-        userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-        
-        // if answer is correct
-        if(userAnswer===questions[i].correctAnswer){
-          // add to the number of correct answers
-          numCorrect++;
-          
-          // color the answers green
-          answerContainers[i].style.color = 'lightgreen';
-        }
-        // if answer is wrong or blank
-        else{
-          // color the answers red
-          answerContainers[i].style.color = 'red';
-        }
-      }
-  
-      // show number of correct answers out of total
-      resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-    }
-  
-    // show questions right away
-    showQuestions(questions, quizContainer);
-    
-    // on submit, show results
-    submitButton.onclick = function(){
-      showResults(questions, quizContainer, resultsContainer);
-    }
-  
+// this get function is short for the getElementById function  
+function get(x){
+  return document.getElementById(x);
+}
+// this function renders a question for display on the page
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    // resets the variable to allow users to restart the test
+    pos = 0;
+    correct = 0;
+    // stops rest of renderQuestion function running when test is completed
+    return false;
   }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  
+  question = questions[pos].question;
+  chA = questions[pos].a;
+  chB = questions[pos].b;
+  chC = questions[pos].c;
+  // display the question
+  test.innerHTML = "<h3>"+question+"</h3>";
+  // display the answer options
+  // the += appends to the data we started on the line above
+  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+  // use getElementsByName because we have an array which it will loop through
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+  // checks if answer matches the correct choice
+  if(choice == questions[pos].answer){
+    //each time there is a correct answer this value increases
+    correct++;
+  }
+  // changes position of which character user is on
+  pos++;
+  // then the renderQuestion function runs again to go to next question
+  renderQuestion();
+}
+// Add event listener to call renderQuestion on page load event
+window.addEventListener("load", renderQuestion);
