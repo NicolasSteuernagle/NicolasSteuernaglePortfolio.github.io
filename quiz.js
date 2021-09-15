@@ -1,4 +1,4 @@
-var position = 0, test, userProgress, question, userAnswer, possibleAnswers, A, B, C, correct = 0;
+var position = 0, test, userProgress, question, userAnswer, possibleAnswers, choiceA, choiceB, choiceC, correct = 0;
 var myQuestions = [
   {
       question: "What Video Game is Shown in the Image?",
@@ -44,15 +44,15 @@ function renderQuestion(){
   get("userProgress").innerHTML = "Question "+(position+1)+" of "+myQuestions.length;
   
   question = myQuestions[position].question;
-  A = myQuestions[position].a;
-  B = myQuestions[position].b;
-  C = myQuestions[position].c;
+  choiceA = myQuestions[position].a;
+  choiceB = myQuestions[position].b;
+  choiceC = myQuestions[position].c;
   
   test.innerHTML = "<h3>"+question+"</h3>";
 
-  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+A+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+B+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+C+"</label><br><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+choiceA+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+choiceB+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+choiceC+"</label><br><br>";
   test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
 function checkAnswer(){
