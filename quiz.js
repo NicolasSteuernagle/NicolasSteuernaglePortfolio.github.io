@@ -55,7 +55,7 @@ function renderQuestion(){
   
   test.innerHTML = "<h3>"+question+"</h3>";
 
-  test.innerHTML += "<img src=\"" + img + "\" width = \"200\"  height = \"200\"><br>";
+  test.innerHTML += "<img src=\"" + img + "\" width = \"250\"  height = \"250\"><br>";
 
   test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
   test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
