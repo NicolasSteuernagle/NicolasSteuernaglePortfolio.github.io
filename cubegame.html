@@ -10,9 +10,6 @@ canvas {
 </style>
 </head>
 <body onload="startGame()">
-<div style="overflow: hidden; width: 100%; background-color:rgb(46,46,46); bottom: 0;">
-    <p style="text-align: center; font-size: larger; font-family: Arial, Helvetica, sans-serif; color: red;">Cube Game</p>
-</div>
 <script>
 
 var myGamePiece;
@@ -146,6 +143,9 @@ function clearmove() {
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
   <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+</div>
+<div style="overflow: hidden; width: 100%; background-color:rgb(46,46,46); bottom: 0px; position: absolute;">
+    <p style="text-align: center; font-size: larger; font-family: Arial, Helvetica, sans-serif; color: red;">Cube Game</p>
 </div>
 </body>
 </html>
