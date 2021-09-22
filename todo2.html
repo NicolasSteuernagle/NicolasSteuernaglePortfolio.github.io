@@ -15,15 +15,44 @@
         <div class="header">
             <p>CISC 275 Portfolio ToDo List Week 2</p>
         </div>
-        <div class = "change_todo">
-            <dl>
-                <dt>-Follow the tutorial from the article I read on React to create a Tic-Tac-Toe game.</dt>
-                <dd>*This will allow me to get hands on with React and learn how to create advanced projects.*</dd>
-                <dt>-Use Bootstrap to style the rest of the website.</dt>
-                <dd>*This will allow for strong mastery of css.*</dd>
-                <dt>-Follow tutorials to create a functional board game with Typescript. </dt>
-                <dd>*This will allow me to start working on a more large project with Typescript.*</dd>
-            </dl>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Create React Tic-Tac-Toe game</a>
+                </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">I want to create a Tic-Tac-Toe game with React. This will allow me to get more advance and dive into react.
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Use Bootstrap to style the rest of the website</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">I want to use bootstrap to style the website. This will allow for strong mastery of CSS.
+                        </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Create a Typescript boardgame</a>
+                      </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                      <div class="panel-body">I want to follow tutorials to create a typescript boardgame. This will allow me to start working on a more large scale project with typescript.</div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class = "btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ToDo By Week<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href = "todo.html">Week 1</a></li>
+            </ul>
         </div>
         <div class="bottombar">
         <p class="a">Nicolas Steuernagle</p>
