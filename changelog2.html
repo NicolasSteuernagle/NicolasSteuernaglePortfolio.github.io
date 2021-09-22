@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>Change log</title>
-        <link href="Style.css" rel="stylesheet">      
+        <link href="Style.css" rel="stylesheet">  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>          
     </head>
     <body>
         <div class="nav">
@@ -15,19 +20,64 @@
         <div class="header">
             <p>CISC 275 Portfolio Change Log Week 2</p>
         </div>
-        <div class ="change_todo">
-            <dl>
-                <dt>-Added the projects page to the main website.</dt>
-                <dd>*Added this page to house all of the artifacts made for the portfolio.*</dd>
-                <dt>-Created a Quiz Game with JavaScript.</dt>
-                <dd>*Used a tutorial from Codemahal to create a quiz game. Modified the quiz game to include images with each question.*</dd>
-                <dt>-Created a Cube Game similar to Flappy Bird.</dt>
-                <dd>*Used a tutorial from w3schools to create a functional game with JavaScript. Because of the advanced nature of the script no changes were made at this time.*</dd>
-                <dt>-Read tutorials on Typescript for beginners.</dt>
-                <dd>*Completed the reading and found the tutorials on this <a href="https://www.tutorialspoint.com/typescript/index.htm">website.</a>*</dd>
-                <dt>-Read about the basics of React and how projects work.</dt>
-                <dd>*Found the reading and tutorials on this <a href="https://reactjs.org/tutorial/tutorial.html">website.</a>*</dd>
-            </dl>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Created The Projects Page</a>
+                </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">Created the projects page to house all of the artifacts created for the portfolio.</div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Created the Quiz Game</a>
+                      </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                      <div class="panel-body">Used a tutorial from Codemahal to create a functional quiz game. I modified the game to include an image along with each question. </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Created Cube Game</a>
+                      </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                      <div class="panel-body">Used a tutorial from w3Schools to create a functional game with JavaScript. Because of the advanced nature of the game, no changes were made at this time.</div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Read Tutorials on Typescript</a>
+                      </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                      <div class="panel-body">Completed the readings and found Typescript tutorials on this <a href = "https://www.tutorialspoint.com/typescript/index.htm">website</a></div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Read about the Basic of React</a>
+                      </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                      <div class="panel-body">Read all materials posted to this <a href = "https://reactjs.org/tutorial/tutorial.html">website </a>about the basics of React. </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class = "dropdown">
+            <button class = "btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ChnageLog By Week<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href = "changelog.html">Week 1</a></li>
+            </ul>
         </div>
         <div class="bottombar">
             <p class="a">Nicolas Steuernagle</p>
