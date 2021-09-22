@@ -104,11 +104,10 @@ body{
     color: rgb(46,46,46);
     text-align: center;
 }
-.button{
+#button_spot{
     position: absolute;
     right: 140px;
     bottom: 135px;
-    color: black;
     text-align: center;
     font-size: 18px;
 }
