@@ -86,6 +86,14 @@ body{
     height: 320px;
     border-radius: 8px;
 }
+.img2{
+    position: fixed;
+    bottom: 160px;
+    right:20px;
+    width: 350px;
+    height: 320px;
+    border-radius: 8px;
+}
 .nexttoimg{
     position: fixed;
     left: 400px;
@@ -97,7 +105,7 @@ body{
 }
 .cookiestext{
     position: absolute;
-    right: 45px;
+    right: 500px;
     bottom: 165px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -106,7 +114,7 @@ body{
 }
 #button_spot{
     position: absolute;
-    right: 140px;
+    right: 600px;
     bottom: 135px;
     text-align: center;
     font-size: 18px;
